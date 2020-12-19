@@ -1,0 +1,49 @@
+@page "/loads/{LoadParameterValue:int?}"
+
+
+<h1>Loads</h1>
+<form class="form-inline">
+    <input type="number" class=" input-group" min="0" max="300" @bind="@LoadValue" /> kg
+    <select class="input-group" @bind="@BarbellSelected">
+
+        @foreach (var item in Barbell.BarbellsAvailable)
+        {
+            <option value="@item.Id">@item.Name</option>
+        }
+    </select>
+</form>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>%</th>
+            <th>Value</th>
+            <th>Barbell</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var percent in LoadPercents)
+        {
+            <tr>
+                <th>@percent.Percent%</th>
+                <td>@percent.Value Kg</td>
+                <td>
+                    <a  @onclick="@(() => ShowVisual(percent.Value, percent.BarbellLoading.Barbell.Weight ))" class="like-link">
+                        @if (percent.BarbellLoading.NotPossibleBarbell)
+                        {
+                            <span>No Barbell available</span>
+                        }
+                        else
+                        {
+                            @percent.BarbellLoading.Barbell.Name
+                            @foreach (var plate in percent.BarbellLoading.Plates)
+                            {
+                                <span> - @plate.Count x @plate.Name</span>
+                            }
+                        }
+                    </a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

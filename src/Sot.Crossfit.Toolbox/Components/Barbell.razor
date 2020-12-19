@@ -1,0 +1,25 @@
+﻿<div class="playground">
+    <div class="bar">
+        <div class="plates left">
+            @foreach (var plate in BarbellLoading.Plates)
+            {
+                for (int i = 0; i < plate.Count; i++)
+                {
+                    <div class="plate @plate.CssClass">@plate.ToString()</div>
+                }
+            }
+        </div>
+        <div class="grid">
+            @BarbellLoading.Barbell.ToString()
+        </div>
+        <div class="plates right">
+            @foreach (var plate in BarbellLoading.Plates)
+            {
+                for (int i = 0; i < plate.Count; i++)
+                {
+                    <div class="plate @plate.CssClass">@plate.ToString()</div>
+                }
+            }
+        </div>
+    </div>
+</div>
