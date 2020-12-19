@@ -1,0 +1,168 @@
+@import url('open-iconic/font/css/open-iconic-bootstrap.min.css');
+
+html, body {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+a, .btn-link {
+    color: #0366d6;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #1b6ec2;
+    border-color: #1861ac;
+}
+
+.content {
+    padding-top: 1.1rem;
+}
+
+.valid.modified:not([type=checkbox]) {
+    outline: 1px solid #26b050;
+}
+
+.invalid {
+    outline: 1px solid red;
+}
+
+.validation-message {
+    color: red;
+}
+
+#blazor-error-ui {
+    background: lightyellow;
+    bottom: 0;
+    box-shadow: 0 -1px 2px rgba(0, 0, 0, 0.2);
+    display: none;
+    left: 0;
+    padding: 0.6rem 1.25rem 0.7rem 1.25rem;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+
+    #blazor-error-ui .dismiss {
+        cursor: pointer;
+        position: absolute;
+        right: 0.75rem;
+        top: 0.5rem;
+    }
+
+
+
+
+
+.playground {
+    width: 100%;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: tahoma
+}
+
+.bar {
+    display: flex;
+    width: 100%;
+    height: 30px;
+    background: black;
+    justify-content: space-between;
+    color: white;
+    text-align: center;
+}
+
+.grid {
+    width: 40%;
+    border-left: 2px solid white;
+    border-right: 2px solid white;
+    font-size: 1.5em;
+}
+
+.plates {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    width: 100%;
+    position: relative;
+}
+
+    .plates.left {
+        flex-direction: row-reverse;
+    }
+
+.plate {
+    display: flex;
+    align-items: center;
+    width: 25px;
+    height: 450px;
+    border: 5px solid white;
+    background: black;
+    display: inline-block;
+    color: white;
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    text-align: center;
+    vertical-align: middle;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em;
+}
+
+    .plate.small {
+        width: 25px;
+        height: 300px;
+        background: #AB3E3C;
+        font-size: 0.9em;
+    }
+
+    .plate.extra-small {
+        width: 25px;
+        height: 250px;
+        background-color: #3C5885;
+    }
+
+    .plate.extra-extra-small {
+        width: 25px;
+        height: 200px;
+        background: #F0B41B;
+    }
+
+    .plate.extra-extra-extra-extra-small {
+        width: 25px;
+        height: 100px;
+        background-color: #E8E8E8;
+        color: black;
+    }
+
+    .plate.extra-extra-extra-small {
+        width: 25px;
+        height: 150px;
+        background-color: #489949;
+    }
+
+    .plate.large {
+        width: 50px;
+        font-size: 2.0em;
+    }
+
+    .plate.extra-large {
+        width: 75px;
+        font-size: 2.0em;
+    }
+
+    .plate.extra-extra-large {
+        width: 125px;
+        font-size: 2.0em;
+    }
+
+.blazored-modal {
+    width: 85vw;
+}
+
+.like-link {
+    cursor: pointer;
+    color: #007bff;
+}
